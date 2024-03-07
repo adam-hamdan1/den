@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('den.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+h1 {
+    font-size: 6vw; /* Responsive font size */
+    color: #f57f24; /* Ripe Mango */
+}
+
+p {
+    color: #e8aa25; /* Ripe Mango */
+    font-weight: bold;
+    font-size: 4.5vw; /* Responsive font size */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 3vh 6vw;
+    font-size: 4vw; /* Responsive font size */
+    cursor: pointer;
+    background-color: #FFDE23; /* Banana Yellow */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+.buttons button:hover {
+    background-color: #EE3338; /* Deep Carmine Pink */
+}
+
+#response {
+    font-size: 4.5vw; /* Responsive font size */
+    font-weight: bold;
+    margin-top: 5vh;
+    color: #B32E30; /* American Red */
+}

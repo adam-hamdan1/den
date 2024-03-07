@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Den Days</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Answer this very important question that will make or break my day.</h1>
+        <p id="question">Den Date? We can get Burgers!</p>
+        <div class="buttons">
+            <button onclick="answerYes()">Yes</button>
+            <button id="noButton" onclick="answerNo()">No</button>
+        </div>
+        <p id="response"></p>
+    </div>
+
+    <!-- Add the audio element -->
+    <audio id="myAudio" src="carnival.mp3"></audio>
+
+    <script>
+        let noMessages = [
+            "Or Chicken Nuggies",
+            "Come on Lemme Take You Out",
+            "Stop Playing Games",
+            "Ok Enough.",
+            "Lock in Twin",
+            "Bitch Please",
+            "BAS"
+        ];
+
+        let currentIndex = 0; // Initialize the index for the messages array
+
+        function answerYes() {
+            document.getElementById('response').textContent = "Chalo G! Alexa Play Carnival by Kanye West";
+            document.getElementById('response').classList.add('active'); // Add 'active' class
+
+            // Remove the "No" button
+            document.getElementById('noButton').remove();
+
+            // Play the song
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+
+        function answerNo() {
+            document.getElementById('response').textContent = noMessages[currentIndex];
+            document.getElementById('response').classList.add('active'); // Add 'active' class
+            if (currentIndex < noMessages.length - 1) {
+                currentIndex++; // Move to the next message if not at the end of the array
+            }
+        }
+    </script>
+</body>
+</html>
